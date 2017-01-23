@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="73c1486937745b1acd867ce73ddd3c31673d7ff8">
+        <dex dex="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_39066b4cfd4a4b8f8f25f8645c3d4f09e3dad5cc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="705054ed7229e9dc52734e15630f630ba1e5d286">
+        <dex dex="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4415cd52e7f51ff529c32c36655a3dd3822d6b0b/classes.dex" />
+    </item>
+
+</items>

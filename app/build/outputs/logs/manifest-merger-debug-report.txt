@@ -1,0 +1,51 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:3:7-41
+		INJECTED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml
+		INJECTED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:5:7-32
+		INJECTED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml
+		INJECTED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:4:7-30
+		INJECTED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml
+		INJECTED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:8:5-20:19
+	android:label
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:8:54-86
+	android:icon
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:8:18-53
+activity#com.vishesh.eight_puzzle.main
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:9:9-15:20
+	android:label
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:10:19-51
+	android:name
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:9:19-39
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:11:13-14:29
+action#android.intent.action.MAIN
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:13:17-77
+	android:name
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:13:27-74
+activity#com.vishesh.eight_puzzle.Game
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:16:9-52
+	android:name
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:16:19-39
+activity#com.vishesh.eight_puzzle.Help
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:17:9-52
+	android:name
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:17:19-39
+activity#com.vishesh.eight_puzzle.Credits
+ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:18:9-55
+	android:name
+		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:18:19-42

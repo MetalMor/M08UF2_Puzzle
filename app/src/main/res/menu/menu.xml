@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/helpmenu" android:title="Help" android:icon="@android:drawable/ic_menu_help" />
+<item android:id="@+id/exitmenu" android:title="@string/exit" android:icon="@android:drawable/ic_lock_power_off"/>
+<item android:id="@+id/creditsmenu" android:title="Credits" android:icon="@android:drawable/ic_menu_info_details" />
+</menu>
+ 
