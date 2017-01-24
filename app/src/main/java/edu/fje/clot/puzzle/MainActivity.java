@@ -1,4 +1,4 @@
-package com.vishesh.eight_puzzle;
+package edu.fje.clot.puzzle;
 
 
 import android.app.Activity;
@@ -11,18 +11,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class main extends Activity {
+public class MainActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
         Button play=(Button) findViewById(R.id.PlayButton);
         play.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(), Game.class);
+				Intent intent = new Intent(getApplicationContext(), GameActivity.class);
 				startActivity(intent);
 			}
 		});
@@ -40,14 +40,6 @@ public class main extends Activity {
 		switch (item.getItemId()) {
 		case R.id.exitmenu:
 			finish();
-			break;
-		case R.id.helpmenu:
-			Intent intent = new Intent(getApplicationContext(), Help.class);
-			startActivity(intent);
-			break;
-		case R.id.creditsmenu:
-			Intent i = new Intent(getApplicationContext(), Credits.class);
-			startActivity(i);
 			break;
 		}
 		return super.onOptionsItemSelected(item);

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.vishesh.eight_puzzle"
+        applicationId "edu.fje.clot.puzzle"
     }
 
     buildTypes {

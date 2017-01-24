@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.vishesh.eight_puzzle;
+package edu.fje.clot.puzzle;
 
 public final class R {
     public static final class attr {
@@ -32,18 +32,16 @@ public final class R {
         public static final int MoveCounter=0x7f06000d;
         public static final int MoveText=0x7f06000b;
         public static final int PlayButton=0x7f060012;
-        public static final int RelativeLayout01=0x7f060010;
-        public static final int TitleImage=0x7f06000f;
+        public static final int RelativeLayout01=0x7f06000f;
+        public static final int TitleImage=0x7f060010;
         public static final int TitleText=0x7f060011;
         public static final int creditsmenu=0x7f060015;
         public static final int exitmenu=0x7f060014;
         public static final int helpmenu=0x7f060013;
     }
     public static final class layout {
-        public static final int credits=0x7f030000;
-        public static final int game=0x7f030001;
-        public static final int help=0x7f030002;
-        public static final int main=0x7f030003;
+        public static final int activity_game =0x7f030000;
+        public static final int activity_main =0x7f030001;
     }
     public static final class menu {
         public static final int menu=0x7f050000;

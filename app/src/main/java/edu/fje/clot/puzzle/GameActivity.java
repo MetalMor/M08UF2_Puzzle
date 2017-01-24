@@ -1,4 +1,4 @@
-package com.vishesh.eight_puzzle;
+package edu.fje.clot.puzzle;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 @SuppressWarnings("deprecation")
-public class Game extends Activity {
+public class GameActivity extends Activity {
    
 	private TextView moveCounter;
  	private TextView feedbackText;
@@ -24,7 +23,7 @@ public class Game extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game);
+        setContentView(R.layout.activity_game);
         buttons=findButtons();
        
         for(int i=0;i<9;i++)
