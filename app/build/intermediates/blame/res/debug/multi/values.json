@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+        "outputFile": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 94
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 0,
@@ -30,7 +30,7 @@
                     "endOffset": 132
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -49,7 +49,7 @@
                     "endOffset": 186
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -68,7 +68,7 @@
                     "endOffset": 250
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -87,7 +87,7 @@
                     "endOffset": 298
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -106,7 +106,7 @@
                     "endOffset": 343
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 0,
@@ -125,7 +125,7 @@
                     "endOffset": 397
                 },
                 "from": {
-                    "file": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/values/strings.xml",
+                    "file": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
