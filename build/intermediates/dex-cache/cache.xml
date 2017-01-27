@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="73c1486937745b1acd867ce73ddd3c31673d7ff8">
-        <dex dex="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_39066b4cfd4a4b8f8f25f8645c3d4f09e3dad5cc/classes.dex" />
+        sha1="0147aa0154a04f6c60d8f07692cd24c8619a0981">
+        <dex dex="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c668c1f58f346f1a4721615403c69281ceb07985/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="705054ed7229e9dc52734e15630f630ba1e5d286">
-        <dex dex="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4415cd52e7f51ff529c32c36655a3dd3822d6b0b/classes.dex" />
+        sha1="7d237eb5c9316301e612f36b07f1495461e89125">
+        <dex dex="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_78e883ceea53033adeae3c5b73c40c9b920e8373/classes.dex" />
     </item>
 
 </items>

@@ -3,6 +3,7 @@ package edu.fje.clot.puzzle;
 import java.util.ArrayList;
 import java.util.Collections;
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsoluteLayout;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 public class GameActivity extends Activity {
    
 	private TextView moveCounter;
- 	private TextView feedbackText;
+	private MediaPlayer mediaPlayer;
  	private Button[] buttons;
     private Boolean bad_move=false;
    	private static final Integer[] goal = new Integer[] {0,1,2,3,4,5,6,7,8};
@@ -34,11 +35,11 @@ public class GameActivity extends Activity {
        
         
        moveCounter = (TextView) findViewById(R.id.MoveCounter);
-	   feedbackText = (TextView) findViewById(R.id.FeedbackText);
-		
+		mediaPlayer = MediaPlayer.create(this,R.raw.click);
 		for (int i = 1; i < 9; i++) {
 			buttons[i].setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
+					mediaPlayer.start();
 					// Aqui efecto de sonido (y posiblemente animacion ???)
 					makeMove((Button) v);
 				}
@@ -47,7 +48,6 @@ public class GameActivity extends Activity {
 		
 		
 		moveCounter.setText("0");
-		feedbackText.setText(R.string.game_feedback_text);
     
 }
     public Button[] findButtons() {
@@ -72,52 +72,7 @@ public class GameActivity extends Activity {
 		b_text=Integer.parseInt((String) b.getText());
      	b_pos=find_pos(b_text);
    		zuk_pos=find_pos(0);
-   		switch(zuk_pos)
-   		{
-   		case(0):
-   			if(b_pos==1||b_pos==3)
-   		    bad_move=false;
-   		    break;
-   		case(1):
-   			if(b_pos==0||b_pos==2||b_pos==4)
-   		    bad_move=false;
-   		    break;
-   		case(2):
-   			if(b_pos==1||b_pos==5)
-   		    bad_move=false;
-   		    break;
-   		case(3):
-   			if(b_pos==0||b_pos==4||b_pos==6)
-   		    bad_move=false;
-   		    break;
-   		case(4):
-   			if(b_pos==1||b_pos==3||b_pos==5||b_pos==7)
-   		    bad_move=false;
-   		    break;
-   		case(5):
-   			if(b_pos==2||b_pos==4||b_pos==8)
-   		    bad_move=false;
-   		    break;
-   		case(6):
-   			if(b_pos==3||b_pos==7)
-   		    bad_move=false;
-   		    break;
-   		case(7):
-   			if(b_pos==4||b_pos==6||b_pos==8)
-   		    bad_move=false;
-   		    break;
-   		case(8):
-   			if(b_pos==5||b_pos==7)
-   		    bad_move=false;
-   		    break;
-   		}
-   		
-   		if(bad_move)
-   		{
-   			feedbackText.setText("Move Not Allowed");
-   			return;
-   		}
-   		feedbackText.setText("Move OK");
+
    		cells.remove(b_pos);
    		cells.add(b_pos, 0);
    		cells.remove(zuk_pos);
@@ -134,7 +89,6 @@ public class GameActivity extends Activity {
 	        	        	   return;
 	           }
 	        }
-		 feedbackText.setText("we have a winner");
 	}
 	
 	public void fill_grid()
@@ -198,11 +152,9 @@ public class GameActivity extends Activity {
 				absParams.y = 215;
 				buttons[text].setLayoutParams(absParams);
 				break;
-		 
-		 
+
 		 }
-		
-		 
+
 		}
 		
 	}

@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/layout/main.xml"
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/layout/activity_game.xml",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/layout/activity_game.xml"
     },
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/layout/game.xml",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/layout/game.xml"
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/layout/activity_main.xml"
     }
 ]
