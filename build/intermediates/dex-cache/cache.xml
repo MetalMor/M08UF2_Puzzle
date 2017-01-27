@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0147aa0154a04f6c60d8f07692cd24c8619a0981">
+        sha1="1bc33ee846489538b1f98400af37206e47ee7414">
         <dex dex="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c668c1f58f346f1a4721615403c69281ceb07985/classes.dex" />
     </item>
     <item
@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7d237eb5c9316301e612f36b07f1495461e89125">
+        sha1="a97d1c4c58c572ff461880577c408e9a809995a6">
         <dex dex="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_78e883ceea53033adeae3c5b73c40c9b920e8373/classes.dex" />
     </item>
 

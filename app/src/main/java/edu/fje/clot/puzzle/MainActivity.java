@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import edu.fje.clot.puzzle.audio.MusicService;
+
 public class MainActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
@@ -19,11 +21,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Button play=(Button) findViewById(R.id.PlayButton);
         play.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(), GameActivity.class);
-				startActivity(intent);
+				startService(new Intent(getApplicationContext(), MusicService.class));
+				startActivity(new Intent(getApplicationContext(), GameActivity.class));
 			}
 		});
         

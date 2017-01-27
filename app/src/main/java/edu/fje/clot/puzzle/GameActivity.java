@@ -34,12 +34,14 @@ public class GameActivity extends Activity {
         fill_grid();
        
         
-       moveCounter = (TextView) findViewById(R.id.MoveCounter);
+        moveCounter = (TextView) findViewById(R.id.MoveCounter);
 		mediaPlayer = MediaPlayer.create(this,R.raw.click);
+
 		for (int i = 1; i < 9; i++) {
 			buttons[i].setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					mediaPlayer.start();
+
 					// Aqui efecto de sonido (y posiblemente animacion ???)
 					makeMove((Button) v);
 				}
