@@ -16,22 +16,23 @@ public final class R {
     public static final class drawable {
         public static final int eightpuzzle=0x7f020000;
         public static final int icon=0x7f020001;
-        public static final int smalltiles=0x7f020002;
+        public static final int porky=0x7f020002;
+        public static final int smalltiles=0x7f020003;
     }
     public static final class id {
-        public static final int Button00=0x7f080004;
-        public static final int Button01=0x7f080005;
-        public static final int Button02=0x7f080006;
-        public static final int Button03=0x7f080007;
-        public static final int Button04=0x7f080008;
-        public static final int Button05=0x7f080009;
-        public static final int Button06=0x7f08000a;
-        public static final int Button07=0x7f08000b;
-        public static final int Button08=0x7f08000c;
+        public static final int Button00=0x7f080002;
+        public static final int Button01=0x7f080003;
+        public static final int Button02=0x7f080004;
+        public static final int Button03=0x7f080005;
+        public static final int Button04=0x7f080006;
+        public static final int Button05=0x7f080007;
+        public static final int Button06=0x7f080008;
+        public static final int Button07=0x7f080009;
+        public static final int Button08=0x7f08000a;
         public static final int Game=0x7f080000;
         public static final int GameField=0x7f080001;
-        public static final int MoveCounter=0x7f080003;
-        public static final int MoveText=0x7f080002;
+        public static final int MoveCounter=0x7f08000c;
+        public static final int MoveText=0x7f08000b;
         public static final int PlayButton=0x7f080010;
         public static final int RelativeLayout01=0x7f08000d;
         public static final int TitleImage=0x7f08000e;
