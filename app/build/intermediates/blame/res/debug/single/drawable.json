@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/icon.png",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/icon.png"
-    },
-    {
         "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/eightpuzzle.png",
         "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/eightpuzzle.png"
     },

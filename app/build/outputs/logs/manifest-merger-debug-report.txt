@@ -17,15 +17,10 @@ ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xm
 		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:7:5-43
-MERGED from [com.jakewharton:butterknife:8.5.1] /home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.5.1/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-compat:25.1.0] /home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/AndroidManifest.xml:21:5-23:58
-	tools:overrideLibrary
-		ADDED from [com.android.support:support-compat:25.1.0] /home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/AndroidManifest.xml:23:9-55
 	android:minSdkVersion
 		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:7:15-41
 application
 ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:9:5-20:19
-MERGED from [com.android.support:support-compat:25.1.0] /home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from /home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/AndroidManifest.xml:9:54-86
 	android:icon

@@ -11,11 +11,4 @@
         <item>@id/Button07</item>
         <item>@id/Button08</item>
     </array>
-    <string name="app_name">Puzzle</string>
-    <string name="exit">Exit</string>
-    <string name="feedback_title">Feedback: </string>
-    <string name="game_feedback_text">No feedback yet!</string>
-    <string name="moves_title">Moves: </string>
-    <string name="play_button">Play</string>
-    <string name="sound">Switch sound on/off</string>
 </resources>

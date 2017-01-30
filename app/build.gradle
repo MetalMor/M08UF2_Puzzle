@@ -14,10 +14,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-
-    dependencies {
-        compile 'com.jakewharton:butterknife:8.5.1'
-        annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    }
 }
 
