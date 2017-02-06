@@ -20,8 +20,8 @@
         </activity>
         <activity android:name="edu.fje.clot.puzzle.GameActivity" />
 
-        <service android:name="edu.fje.clot.puzzle.audio.MusicService" />
-        <service android:name="edu.fje.clot.puzzle.image.ImageService" />
+        <service android:name="edu.fje.clot.puzzle.service.audio.MusicService" />
+        <service android:name="edu.fje.clot.puzzle.service.image.ImageService" />
     </application>
 
 </manifest>

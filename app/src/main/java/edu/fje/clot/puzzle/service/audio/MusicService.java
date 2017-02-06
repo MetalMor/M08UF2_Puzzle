@@ -1,11 +1,10 @@
-package edu.fje.clot.puzzle.audio;
+package edu.fje.clot.puzzle.service.audio;
 
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 import edu.fje.clot.puzzle.R;
 

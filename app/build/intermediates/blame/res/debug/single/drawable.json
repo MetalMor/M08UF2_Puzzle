@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/icon.png",
-        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/icon.png"
+        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/icon.png",
+        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/icon.png"
     },
     {
-        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/porky.png",
-        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/porky.png"
+        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/eightpuzzle.png",
+        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/eightpuzzle.png"
     },
     {
-        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/smalltiles.png",
-        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/smalltiles.png"
+        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/smalltiles.png",
+        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/smalltiles.png"
     },
     {
-        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/eightpuzzle.png",
-        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/eightpuzzle.png"
+        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/porky.png",
+        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/porky.png"
     }
 ]
