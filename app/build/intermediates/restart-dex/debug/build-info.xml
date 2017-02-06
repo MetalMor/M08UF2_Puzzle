@@ -5,29 +5,29 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="8330358471255"
+    timestamp="8474717538640"
     token="-29811981305632172"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="8406" />
+        duration="6278" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1771" />
+        duration="3154" />
     <task
         name="verifier"
-        duration="4" />
+        duration="755" />
 
     <artifact
         location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="8330358471255"
+        timestamp="8474717538640"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/outputs/apk/app-debug.apk"

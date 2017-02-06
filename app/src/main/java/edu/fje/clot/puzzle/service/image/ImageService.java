@@ -55,23 +55,18 @@ public class ImageService extends Service {
     }
 
     private static int toInteger(double d) {
-        try {
-            return Util.toInteger(d);
-        }catch(Exception ex) {
-            ex.printStackTrace();
-            return 0;
-        }
+        return Util.toInteger(d);
     }
 
     private static int getProportion() {
         return toInteger(Math.sqrt(PUZZLE_SIZE));
     }
 
-    private int getRowIndex(int index) {
+    public static int getRowIndex(int index) {
         return toInteger(index / getProportion());
     }
 
-    private int getColumnIndex(int index) {
+    public static int getColumnIndex(int index) {
         return toInteger(index % getProportion());
     }
 
