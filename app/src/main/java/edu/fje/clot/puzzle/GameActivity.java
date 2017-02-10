@@ -1,5 +1,7 @@
 package edu.fje.clot.puzzle;
 
+import java.io.FileDescriptor;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -7,8 +9,15 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
@@ -17,6 +26,7 @@ import android.widget.TextView;
 import edu.fje.clot.puzzle.service.audio.MusicService;
 import edu.fje.clot.puzzle.service.image.ImageService;
 import edu.fje.clot.puzzle.statics.LayoutParamsLists;
+import edu.fje.clot.puzzle.statics.Util;
 
 
 @SuppressWarnings("deprecation")
@@ -38,11 +48,36 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_game);
-		initGameButtons();
-		initSoundButton();
-		initCounter();
+
+		Intent pickImage = new Intent(Intent.ACTION_PICK,
+				android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		startActivityForResult(pickImage, 0);
 
 	}
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		switch (requestCode) {
+			case 0:
+				if (null != data) {
+					try {
+						ImageService.getInstance().setImage(
+								Util.getBitmapFromUri(data.getData(), this)
+								);
+					} catch(IOException ex) {
+						ex.printStackTrace();
+					}
+					initGameButtons();
+					initSoundButton();
+					initCounter();
+				}
+				break;
+			default:
+				Log.d("Intent", "Unrecognized code");
+				break;
+		}
+	}
+
 
 	/*@Override
 	public void onDestroy() {

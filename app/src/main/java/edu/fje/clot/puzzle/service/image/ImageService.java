@@ -30,8 +30,16 @@ public class ImageService extends Service {
     }
     @Override
     public void onCreate() {
-        image = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.porky);
+        setImage(R.drawable.porky);
         instance = this;
+    }
+    public void setImage(int id) {
+        image = BitmapFactory.decodeResource(getApplicationContext().getResources(), id);
+        splitImage();
+    }
+    public void setImage(Bitmap img) {
+        image = img;
+        splitImage();
     }
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -41,6 +49,7 @@ public class ImageService extends Service {
 
     private void splitImage() {
         int index, chunkHeight, chunkWidth;
+        chunks = new ArrayList<Bitmap>();
         while(chunks.size() < PUZZLE_SIZE) {
             index = chunks.size();
             chunkHeight = toInteger(image.getHeight() / getProportion());
