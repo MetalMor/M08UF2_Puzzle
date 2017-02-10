@@ -4,7 +4,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.util.Log;
 
 import edu.fje.clot.puzzle.R;
 
@@ -14,8 +13,10 @@ import edu.fje.clot.puzzle.R;
 
 public class MusicService extends Service {
 
-    private static final String IDENTIFICADOR = "MusicService";
-    MediaPlayer player;
+    private static MusicService instance;
+    MediaPlayer backgroundMusic;
+    MediaPlayer clickSound;
+    private boolean _on = true;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -24,26 +25,54 @@ public class MusicService extends Service {
 
     @Override
     public void onCreate() {
-        //Toast.makeText(this, "servei creat", Toast.LENGTH_LONG).show();
-        Log.d(IDENTIFICADOR, "onCreate");
-
-        player = MediaPlayer.create(this, R.raw.music);
-        player.setLooping(true);
+        backgroundMusic = MediaPlayer.create(this, R.raw.music);
+        backgroundMusic.setLooping(true);
+        clickSound = MediaPlayer.create(this, R.raw.click);
+        instance = this;
     }
 
     @Override
     public void onDestroy() {
-        //Toast.makeText(this, "servei parat", Toast.LENGTH_LONG).show();
-        Log.d(IDENTIFICADOR, "onDestroy");
-        player.stop();
+        backgroundMusic.stop();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        //Toast.makeText(this, "servei iniciat", Toast.LENGTH_LONG).show();
-        Log.d(IDENTIFICADOR, "onStartCommand");
-        player.start();
+        backgroundMusic.start();
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    public void playClickSound() {
+        if(isOn()) {
+            clickSound.seekTo(0); // va un poco mal esto
+            clickSound.start();
+        }
+    }
+
+    public void play() {
+        if(!isOn()) {
+            setOn(true);
+            backgroundMusic.start();
+        }
+    }
+
+    public void pause() {
+        if(isOn()) {
+            setOn(false);
+            backgroundMusic.pause();
+        }
+    }
+
+    public static MusicService getInstance() {
+        return instance;
+    }
+
+    public boolean isOn() {
+        return _on;
+    }
+
+    private void setOn(boolean on) {
+        _on = on;
     }
 }
 

@@ -51,4 +51,8 @@ public class MainActivity extends Activity {
 	private ComponentName intentService(Class service) {
 		return startService(new Intent(getApplicationContext(), service));
 	}
+
+	private boolean destroyService(Class service) {
+		return stopService(new Intent(getApplicationContext(), service));
+	}
 }

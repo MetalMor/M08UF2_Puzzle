@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="buttons">
-        <item>@id/Button00</item>
-        <item>@id/Button01</item>
-        <item>@id/Button02</item>
-        <item>@id/Button03</item>
-        <item>@id/Button04</item>
-        <item>@id/Button05</item>
-        <item>@id/Button06</item>
-        <item>@id/Button07</item>
-        <item>@id/Button08</item>
+    <array name="game_buttons">
+        <item>@id/button_00</item>
+        <item>@id/button_01</item>
+        <item>@id/button_02</item>
+        <item>@id/button_03</item>
+        <item>@id/button_04</item>
+        <item>@id/button_05</item>
+        <item>@id/button_06</item>
+        <item>@id/button_07</item>
+        <item>@id/button_08</item>
     </array>
 </resources>
