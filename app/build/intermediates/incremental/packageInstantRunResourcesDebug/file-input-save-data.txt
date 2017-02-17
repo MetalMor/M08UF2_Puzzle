@@ -1,19 +1,19 @@
 #Internal package file, do not edit.
-#Fri Feb 17 17:18:51 CET 2017
+#Fri Feb 17 17:33:16 CET 2017
 8.set=ANDROID_RESOURCE
 1.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
 1.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/menu/menu.xml
-3.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/raw/wow.mp3
+3.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/sound_on.png
 3.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
 4.set=ANDROID_RESOURCE
 5.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-5.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/raw/music.mp3
+5.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/raw/click.mp3
 7.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-7.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_main.xml
-11.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
+7.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/sound_off.png
+11.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/icon.png
 11.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
 9.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-9.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_game.xml
+9.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/puzzle.png
 11.set=ANDROID_RESOURCE
 0.set=ANDROID_RESOURCE
 7.set=ANDROID_RESOURCE
@@ -24,19 +24,16 @@
 6.set=ANDROID_RESOURCE
 2.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/resources.arsc
 2.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-4.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/sound_on.png
+4.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/raw/music.mp3
 4.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
 6.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-6.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/raw/click.mp3
+6.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_main.xml
 10.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-10.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/puzzle.png
+10.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
 8.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
-8.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/sound_off.png
+8.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_game.xml
 2.set=ANDROID_RESOURCE
-12.file=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_/res/drawable/icon.png
-12.base=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/resources-debug.ap_
 9.set=ANDROID_RESOURCE
-count=13
+count=12
 5.set=ANDROID_RESOURCE
-12.set=ANDROID_RESOURCE
 1.set=ANDROID_RESOURCE
