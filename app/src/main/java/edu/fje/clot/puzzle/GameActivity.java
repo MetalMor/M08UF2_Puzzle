@@ -89,7 +89,7 @@ public class GameActivity extends Activity {
 
 	@Override
 	public void onDestroy() {
-		MusicService.getInstance().pause();
+		//MusicService.getInstance().pause();
 	}
 
 	/**
