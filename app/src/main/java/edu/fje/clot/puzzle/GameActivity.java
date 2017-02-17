@@ -1,6 +1,5 @@
 package edu.fje.clot.puzzle;
 
-import java.io.FileDescriptor;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,14 +8,9 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.ParcelFileDescriptor;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.AbsoluteLayout;
@@ -32,9 +26,15 @@ import edu.fje.clot.puzzle.statics.Util;
 @SuppressWarnings("deprecation")
 public class GameActivity extends Activity {
 
+	/**
+	 * TODO parar musica al cerrar app
+	 */
+
 	public TextView moveCounter;
 	public Button[] gameButtons;
 	public Button soundButton;
+
+	private static final String DEFAULT_IMAGE_URI = "android.resource://edu.fje.clot.puzzle/drawable/porky";
    	
 	private List<Integer> cells = new ArrayList<Integer>();
 
@@ -59,18 +59,10 @@ public class GameActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		switch (requestCode) {
 			case 0:
-				if (null != data) {
-					try {
-						ImageService.getInstance().setImage(
-								Util.getBitmapFromUri(data.getData(), this)
-								);
-					} catch(IOException ex) {
-						ex.printStackTrace();
-					}
-					initGameButtons();
-					initSoundButton();
-					initCounter();
-				}
+				initImage(data);
+				initGameButtons();
+				initSoundButton();
+				initCounter();
 				break;
 			default:
 				Log.d("Intent", "Unrecognized code");
@@ -78,12 +70,27 @@ public class GameActivity extends Activity {
 		}
 	}
 
+	/**
+	 * Inicializa la imagen del puzzle recibida en el <code>Intent</code>. Si es nulo,
+	 * entonces utiliza la imagen por defecto.
+	 * @param image <code>Intent</code> de la imagen de la galeria escogida.
+     */
+	private void initImage(Intent image) {
+		try {
+			ImageService.getInstance().setImage(
+					Util.getBitmapFromUri(
+							image != null ? image.getData() :
+									Uri.parse(DEFAULT_IMAGE_URI), this)
+			);
+		} catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
 
-	/*@Override
+	@Override
 	public void onDestroy() {
-		destroyService(MusicService.class);
-		destroyService(ImageService.class);
-	}*/
+		MusicService.getInstance().pause();
+	}
 
 	/**
 	 * Inicializa el contador de movimientos efectuados.
@@ -231,9 +238,9 @@ public class GameActivity extends Activity {
 		}
 	}
 
-	/*private boolean destroyService(Class service) {
-		return stopService(new Intent(getApplicationContext(), service));
-	}*/
+	private boolean destroyService(Class service) {
+		return stopService(new Intent(this, service));
+	}
 
 	/**
 	 * Encuentra la posicion del indice numerico de un elemento en el array de celdas. Esto es
