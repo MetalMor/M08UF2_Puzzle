@@ -9,36 +9,38 @@ package edu.fje.clot.puzzle;
 
 public final class R {
     public static final class array {
-        public static final int buttons=0x7f050000;
+        public static final int game_buttons=0x7f050000;
     }
     public static final class attr {
     }
     public static final class drawable {
-        public static final int eightpuzzle=0x7f020000;
-        public static final int icon=0x7f020001;
-        public static final int porky=0x7f020002;
-        public static final int smalltiles=0x7f020003;
+        public static final int icon=0x7f020000;
+        public static final int porky=0x7f020001;
+        public static final int puzzle=0x7f020002;
+        public static final int sound_off=0x7f020003;
+        public static final int sound_on=0x7f020004;
     }
     public static final class id {
-        public static final int Button00=0x7f080002;
-        public static final int Button01=0x7f080003;
-        public static final int Button02=0x7f080004;
-        public static final int Button03=0x7f080005;
-        public static final int Button04=0x7f080006;
-        public static final int Button05=0x7f080007;
-        public static final int Button06=0x7f080008;
-        public static final int Button07=0x7f080009;
-        public static final int Button08=0x7f08000a;
-        public static final int Game=0x7f080000;
-        public static final int GameField=0x7f080001;
-        public static final int MoveCounter=0x7f08000c;
-        public static final int MoveText=0x7f08000b;
-        public static final int PlayButton=0x7f080010;
-        public static final int RelativeLayout01=0x7f08000d;
-        public static final int TitleImage=0x7f08000e;
-        public static final int TitleText=0x7f08000f;
-        public static final int exitmenu=0x7f080012;
-        public static final int musicmenu=0x7f080011;
+        public static final int MoveText=0x7f08000c;
+        public static final int PlayButton=0x7f080011;
+        public static final int RelativeLayout01=0x7f08000e;
+        public static final int TitleText=0x7f080010;
+        public static final int button_00=0x7f080002;
+        public static final int button_01=0x7f080003;
+        public static final int button_02=0x7f080004;
+        public static final int button_03=0x7f080005;
+        public static final int button_04=0x7f080006;
+        public static final int button_05=0x7f080007;
+        public static final int button_06=0x7f080008;
+        public static final int button_07=0x7f080009;
+        public static final int button_08=0x7f08000a;
+        public static final int exitmenu=0x7f080013;
+        public static final int game=0x7f080000;
+        public static final int game_field=0x7f080001;
+        public static final int move_counter=0x7f08000d;
+        public static final int musicmenu=0x7f080012;
+        public static final int sound_button=0x7f08000b;
+        public static final int title_image=0x7f08000f;
     }
     public static final class layout {
         public static final int activity_game=0x7f030000;
@@ -50,14 +52,12 @@ public final class R {
     public static final class raw {
         public static final int click=0x7f040000;
         public static final int music=0x7f040001;
+        public static final int music =0x7f040002;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
         public static final int exit=0x7f060001;
-        public static final int feedback_title=0x7f060002;
-        public static final int game_feedback_text=0x7f060003;
-        public static final int moves_title=0x7f060004;
-        public static final int play_button=0x7f060005;
-        public static final int sound=0x7f060006;
+        public static final int moves_title=0x7f060002;
+        public static final int play_button=0x7f060003;
     }
 }

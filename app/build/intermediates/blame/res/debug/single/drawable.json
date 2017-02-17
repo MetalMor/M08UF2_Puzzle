@@ -1,18 +1,22 @@
 [
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/icon.png",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/icon.png"
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/icon.png",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/icon.png"
     },
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/eightpuzzle.png",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/eightpuzzle.png"
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/puzzle.png",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/puzzle.png"
     },
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/smalltiles.png",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/smalltiles.png"
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/porky.png",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/porky.png"
     },
     {
-        "merged": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/res/merged/debug/drawable/porky.png",
-        "source": "/home/m0r/Program/cole/m08/uf2/Puzzle/app/src/main/res/drawable/porky.png"
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/sound_on.png",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/sound_on.png"
+    },
+    {
+        "merged": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/res/merged/debug/drawable/sound_off.png",
+        "source": "/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/src/main/res/drawable/sound_off.png"
     }
 ]

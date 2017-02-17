@@ -251,5 +251,3 @@ public class GameActivity extends Activity {
 		 return i;
 	}
 }
-
-    

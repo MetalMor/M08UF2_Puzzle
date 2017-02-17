@@ -14,15 +14,15 @@ public class LayoutParamsLists {
     public static List<Integer> getListX() {
         if(listX == null) {
             listX = new ArrayList<Integer>();
-            listX.add(5);
-            listX.add(110);
-            listX.add(215);
-            listX.add(5);
-            listX.add(110);
-            listX.add(215);
-            listX.add(5);
-            listX.add(110);
-            listX.add(215);
+            listX.add(10);
+            listX.add(360);
+            listX.add(710);
+            listX.add(10);
+            listX.add(360);
+            listX.add(710);
+            listX.add(10);
+            listX.add(360);
+            listX.add(710);
         }
         return listX;
     }
@@ -30,15 +30,15 @@ public class LayoutParamsLists {
     public static List<Integer> getListY() {
         if(listY == null) {
             listY = new ArrayList<Integer>();
-            listY.add(5);
-            listY.add(5);
-            listY.add(5);
-            listY.add(110);
-            listY.add(110);
-            listY.add(110);
-            listY.add(215);
-            listY.add(215);
-            listY.add(215);
+            listY.add(10);
+            listY.add(10);
+            listY.add(10);
+            listY.add(360);
+            listY.add(360);
+            listY.add(360);
+            listY.add(710);
+            listY.add(710);
+            listY.add(710);
         }
         return listY;
     }

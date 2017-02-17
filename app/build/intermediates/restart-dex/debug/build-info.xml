@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="24"
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
     density="xxhdpi"
     format="8"
-    plugin-version="2.2.1"
-    timestamp="8474717538640"
-    token="-29811981305632172"
+    plugin-version="2.2.3"
+    timestamp="4004485367824"
+    token="6008564442397396907"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="6278" />
+        duration="68" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3154" />
+        duration="45" />
     <task
         name="verifier"
-        duration="755" />
+        duration="5" />
 
     <artifact
-        location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/outputs/apk/app-debug.apk"
+        location="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="8474717538640"
+        timestamp="4004485367824"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/outputs/apk/app-debug.apk"
+            location="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
 
