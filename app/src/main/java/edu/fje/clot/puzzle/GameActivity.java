@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.BitmapDrawable;
@@ -54,12 +55,20 @@ public class GameActivity extends Activity {
 		startActivityForResult(pickImage, 0);
 
 	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		destroyService(MusicService.class);
+	}
+
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		switch (requestCode) {
 			case 0:
 				initImage(data);
+				intentService(MusicService.class);
 				initGameButtons();
 				initSoundButton();
 				initCounter();
@@ -68,6 +77,18 @@ public class GameActivity extends Activity {
 				Log.d("Intent", "Unrecognized code");
 				break;
 		}
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		switchMusic(false);
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		switchMusic(true);
 	}
 
 	/**
@@ -85,12 +106,6 @@ public class GameActivity extends Activity {
 		} catch(IOException ex) {
 			ex.printStackTrace();
 		}
-	}
-
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-		destroyService(MusicService.class);
 	}
 
 	/**
@@ -239,22 +254,6 @@ public class GameActivity extends Activity {
 		}
 	}
 
-	@Override
-	protected void onStop() {
-		super.onStop();
-		MusicService.getInstance().pause();
-	}
-
-	@Override
-	protected void onRestart() {
-		super.onRestart();
-		MusicService.getInstance().play();
-	}
-
-	private boolean destroyService(Class service) {
-		return stopService(new Intent(this, service));
-	}
-
 	/**
 	 * Encuentra la posicion del indice numerico de un elemento en el array de celdas. Esto es
 	 * la posicion dentro del array de celdas en la que se encuentra el numero que hace referencia
@@ -269,5 +268,36 @@ public class GameActivity extends Activity {
 			 i++;
 		 }
 		 return i;
+	}
+
+	/**
+	 * Apaga/enciende la musica. Si le pasas <code>true</code>, la enciende.
+	 * Si le pasas <code>false</code>, la apaga.
+	 * @param on Flag musica encendida o apagada.
+     */
+	private void switchMusic(boolean on) {
+		MusicService ms = MusicService.getInstance();
+		if(ms != null) {
+			if(on) ms.play();
+			else ms.pause();
+		}
+	}
+
+	/**
+	 * Inicia el servicio de la clase que le pases.
+	 * @param service Clase del servicio (<code>NombreClase.class</code>).
+	 * @return True si lo ha creado, false en caso contrario.
+     */
+	private ComponentName intentService(Class service) {
+		return Util.intentService(this, service);
+	}
+
+	/**
+	 * Destruye el servicio de la clase que le pases.
+	 * @param service Clase del servicio (<code>NombreClase.class</code>).
+	 * @return True si lo ha cerrado, false en caso contrario.
+	 */
+	private boolean destroyService(Class service) {
+		return Util.destroyService(this, service);
 	}
 }

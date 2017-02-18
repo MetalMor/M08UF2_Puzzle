@@ -1,6 +1,8 @@
 package edu.fje.clot.puzzle.statics;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -25,5 +27,11 @@ public class Util {
         Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
         parcelFileDescriptor.close();
         return image;
+    }
+    public static ComponentName intentService(Context context, Class service) {
+        return context.startService(new Intent(context, service));
+    }
+    public static boolean destroyService(Context context, Class service) {
+        return context.stopService(new Intent(context, service));
     }
 }

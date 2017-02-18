@@ -1,7 +1,7 @@
-#Fri Feb 17 17:33:24 CET 2017
-base.0=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_78e883ceea53033adeae3c5b73c40c9b920e8373
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c668c1f58f346f1a4721615403c69281ceb07985/classes.dex
-base.1=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c668c1f58f346f1a4721615403c69281ceb07985
-file.0=/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_78e883ceea53033adeae3c5b73c40c9b920e8373/classes.dex
+#Sat Feb 18 20:18:48 CET 2017
+base.0=/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_39066b4cfd4a4b8f8f25f8645c3d4f09e3dad5cc
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4415cd52e7f51ff529c32c36655a3dd3822d6b0b/classes.dex
+base.1=/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4415cd52e7f51ff529c32c36655a3dd3822d6b0b
+file.0=/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_39066b4cfd4a4b8f8f25f8645c3d4f09e3dad5cc/classes.dex

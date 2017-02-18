@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import edu.fje.clot.puzzle.service.audio.MusicService;
 import edu.fje.clot.puzzle.service.image.ImageService;
+import edu.fje.clot.puzzle.statics.Util;
 
 public class MainActivity extends Activity {
 	@Override
@@ -26,7 +27,6 @@ public class MainActivity extends Activity {
         play.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				intentService(MusicService.class);
 				intentService(ImageService.class);
 				startActivity(new Intent(getApplicationContext(), GameActivity.class));
 			}
@@ -49,10 +49,6 @@ public class MainActivity extends Activity {
 	}
 
 	private ComponentName intentService(Class service) {
-		return startService(new Intent(getApplicationContext(), service));
-	}
-
-	private boolean destroyService(Class service) {
-		return stopService(new Intent(getApplicationContext(), service));
+		return Util.intentService(getApplicationContext(), service);
 	}
 }

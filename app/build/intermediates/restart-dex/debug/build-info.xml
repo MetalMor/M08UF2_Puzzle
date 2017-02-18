@@ -1,37 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="382076606592"
-    token="6008564442397396907"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="8635687675238"
+    token="-29811981305632172"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1503" />
+        duration="129" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="716" />
+        duration="14" />
     <task
         name="verifier"
         duration="1" />
 
     <artifact
-        location="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="4004485367824"
+        timestamp="7662057659062"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/vedmak/AndroidStudioProjects/M08UF2_Puzzle3/app/build/outputs/apk/app-debug.apk"
+            location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="7943003037755"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="8552657350452"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="8635687675238"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/m0r/Program/cole/m08/uf2/Puzzle/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
