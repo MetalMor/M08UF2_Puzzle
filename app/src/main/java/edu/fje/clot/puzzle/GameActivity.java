@@ -89,7 +89,8 @@ public class GameActivity extends Activity {
 
 	@Override
 	public void onDestroy() {
-		//MusicService.getInstance().pause();
+		super.onDestroy();
+		destroyService(MusicService.class);
 	}
 
 	/**
@@ -236,6 +237,18 @@ public class GameActivity extends Activity {
 						new BitmapDrawable(ImageService.getInstance().getChunks().get(index))
 				);
 		}
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		MusicService.getInstance().pause();
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		MusicService.getInstance().play();
 	}
 
 	private boolean destroyService(Class service) {

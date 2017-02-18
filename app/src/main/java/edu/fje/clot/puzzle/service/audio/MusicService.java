@@ -33,7 +33,7 @@ public class MusicService extends Service {
 
     @Override
     public void onDestroy() {
-        backgroundMusic.stop();
+        stop();
     }
 
     @Override
@@ -53,6 +53,18 @@ public class MusicService extends Service {
         if(!isOn()) {
             setOn(true);
             backgroundMusic.start();
+        }
+    }
+
+    public void stop() {
+        stopMediaPlayer(backgroundMusic);
+        stopMediaPlayer(clickSound);
+    }
+
+    private void stopMediaPlayer(MediaPlayer mediaPlayer) {
+        if(mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer = null;
         }
     }
 
