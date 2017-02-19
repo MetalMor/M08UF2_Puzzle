@@ -18,6 +18,8 @@ import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.TextView;
 
+import edu.fje.clot.puzzle.scores.bean.Score;
+import edu.fje.clot.puzzle.scores.db.ScoreDbUtil;
 import edu.fje.clot.puzzle.service.audio.MusicService;
 import edu.fje.clot.puzzle.service.image.ImageService;
 import edu.fje.clot.puzzle.statics.LayoutParamsLists;
@@ -35,7 +37,10 @@ public class GameActivity extends Activity {
 	public Button[] gameButtons;
 	public Button soundButton;
 
-	private static final String DEFAULT_IMAGE_URI = "android.resource://edu.fje.clot.puzzle/drawable/porky";
+	public Score score;
+
+	private static final String URI_DEFAULT_IMAGE = "android.resource://edu.fje.clot.puzzle/drawable/porky";
+	private static final int CODE_PICK_IMAGE = 1;
    	
 	private List<Integer> cells = new ArrayList<Integer>();
 
@@ -52,7 +57,7 @@ public class GameActivity extends Activity {
 
 		Intent pickImage = new Intent(Intent.ACTION_PICK,
 				android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-		startActivityForResult(pickImage, 0);
+		startActivityForResult(pickImage, CODE_PICK_IMAGE);
 
 	}
 
@@ -66,7 +71,7 @@ public class GameActivity extends Activity {
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		switch (requestCode) {
-			case 0:
+			case CODE_PICK_IMAGE:
 				initImage(data);
 				intentService(MusicService.class);
 				initGameButtons();
@@ -79,12 +84,18 @@ public class GameActivity extends Activity {
 		}
 	}
 
+	/**
+	 * Al detener la <code>Activity</code>, detiene la musica.
+	 */
 	@Override
 	protected void onStop() {
 		super.onStop();
 		switchMusic(false);
 	}
 
+	/**
+	 * Reanuda la musica al recuperar la <code>Activity</code>.
+	 */
 	@Override
 	protected void onRestart() {
 		super.onRestart();
@@ -101,7 +112,7 @@ public class GameActivity extends Activity {
 			ImageService.getInstance().setImage(
 					Util.getBitmapFromUri(
 							image != null ? image.getData() :
-									Uri.parse(DEFAULT_IMAGE_URI), this)
+									Uri.parse(URI_DEFAULT_IMAGE), this)
 			);
 		} catch(IOException ex) {
 			ex.printStackTrace();
@@ -112,6 +123,7 @@ public class GameActivity extends Activity {
 	 * Inicializa el contador de movimientos efectuados.
 	 */
 	private void initCounter() {
+		score = Score.newScore(this);
 		moveCounter = (TextView) findViewById(R.id.move_counter);
 		moveCounter.setText("0");
 	}
@@ -163,11 +175,19 @@ public class GameActivity extends Activity {
 	}
 
 	/**
+	 * Elimina la funcionalidad de movimiento de las piezas al pulsarlas.
+	 */
+	private void disconnectGameButtons() {
+		for(Button button : gameButtons)
+			button.setOnClickListener(null);
+	}
+
+	/**
 	 * Encuentra los objetos Button del layout en base al array estatico de strings
 	 * que contiene las IDs de los botones. Se encuentra en <code>values/gameButtons.xml</code>.
 	 * @return Array de objetos Button en el layout.
      */
-    public Button[] findButtons() {
+    private Button[] findButtons() {
 		Button[] b = new Button[9];
 		TypedArray layouts = getResources().obtainTypedArray(R.array.game_buttons);
 		for(int i = 0; i < 9; i++)
@@ -189,8 +209,7 @@ public class GameActivity extends Activity {
      	btPos = findPosition(btIndex);
    		voidPos = findPosition(0);
 
-		if(checkMove(btPos, voidPos)) {
-
+		if(isValidMove(btPos, voidPos)) {
 			MusicService.getInstance().playClickSound();
 			// HOWDY Aqui animacion
 
@@ -200,10 +219,15 @@ public class GameActivity extends Activity {
 			cells.add(voidPos, btIndex); // pone el boton en la posicion del 0
 
 			fillGrid();
-			moveCounter.setText(Integer.toString(Integer.parseInt((String) moveCounter.getText())+1));
 
-			 for(int i = 0; i < 9; i++)
-				if(!cells.get(i).equals(i)) return;
+			int moveCount = Integer.parseInt(moveCounter.getText().toString()) + 1;
+			moveCounter.setText(String.valueOf(moveCount));
+			score.valueIncrement();
+
+			if(isGameFinished()) {
+				disconnectGameButtons();
+				new ScoreDbUtil(this).insert(score);
+			}
 		}
 	}
 
@@ -215,13 +239,24 @@ public class GameActivity extends Activity {
 	 * @param voidPos Posicion vacia, la del 0.
      * @return True si el movimiento es posible, false en caso contrario.
      */
-	private boolean checkMove(int btPos, int voidPos) {
+	private static boolean isValidMove(int btPos, int voidPos) {
 		int btRow = ImageService.getRowIndex(btPos),
 				btColumn = ImageService.getColumnIndex(btPos),
 				voidRow = ImageService.getRowIndex(voidPos),
 				voidColumn = ImageService.getColumnIndex(voidPos);
 		return voidRow == btRow && (btColumn + 1 == voidColumn || btColumn - 1 == voidColumn) ||
 				voidColumn == btColumn && (btRow + 1 == voidRow || btRow - 1 == voidRow);
+	}
+
+	/**
+	 * Comprueba si las piezas estan bien puestas. Retorna <code>true</code> si es asi.
+	 * @return Flag piezas bien puestas.
+     */
+	private boolean isGameFinished() {
+		int len = cells.size();
+		for(int i = 0; i < len; i++)
+			if(!cells.get(i).equals(i)) return false;
+		return true;
 	}
 
 	/**
@@ -275,7 +310,7 @@ public class GameActivity extends Activity {
 	 * Si le pasas <code>false</code>, la apaga.
 	 * @param on Flag musica encendida o apagada.
      */
-	private void switchMusic(boolean on) {
+	private static void switchMusic(boolean on) {
 		MusicService ms = MusicService.getInstance();
 		if(ms != null) {
 			if(on) ms.play();

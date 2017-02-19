@@ -11,8 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ListView;
 
-import edu.fje.clot.puzzle.service.audio.MusicService;
+import edu.fje.clot.puzzle.scores.list.ScoreAdapter;
+import edu.fje.clot.puzzle.scores.list.ScoreList;
 import edu.fje.clot.puzzle.service.image.ImageService;
 import edu.fje.clot.puzzle.statics.Util;
 
@@ -23,8 +25,10 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
-		Button play = (Button) findViewById(R.id.PlayButton);
-        play.setOnClickListener(new OnClickListener() {
+		ListView scoreListView = (ListView) findViewById(R.id.list_view_scores);
+		scoreListView.setAdapter(new ScoreAdapter(this));
+
+		findViewById(R.id.button_play).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				intentService(ImageService.class);

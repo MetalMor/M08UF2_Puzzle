@@ -30,9 +30,9 @@
      android:id="@+id/sound_button"
      android:background="@drawable/sound_on" />
 </AbsoluteLayout>
-<TextView android:layout_below="@+id/game_field" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/MoveText" android:textSize="28px" android:text="@string/moves_title"></TextView>
+<TextView android:layout_below="@+id/game_field" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/text_move" android:textSize="28px" android:text="@string/moves_title"></TextView>
 
- <TextView android:layout_below="@+id/game_field" android:layout_toRightOf="@+id/MoveText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/move_counter" android:text="0" android:textSize="28px" android:layout_marginLeft="5px" android:layout_alignBaseline="@+id/MoveText"></TextView>
+ <TextView android:layout_below="@+id/game_field" android:layout_toRightOf="@+id/text_move" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/move_counter" android:text="0" android:textSize="28px" android:layout_marginLeft="5px" android:layout_alignBaseline="@+id/text_move"></TextView>
 
 
 </RelativeLayout>

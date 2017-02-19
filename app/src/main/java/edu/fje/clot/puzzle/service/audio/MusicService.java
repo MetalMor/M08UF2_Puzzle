@@ -16,7 +16,7 @@ public class MusicService extends Service {
     private static MusicService instance;
     MediaPlayer backgroundMusic;
     MediaPlayer clickSound;
-    private boolean _on = true;
+    private boolean on = true;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -25,10 +25,7 @@ public class MusicService extends Service {
 
     @Override
     public void onCreate() {
-        backgroundMusic = MediaPlayer.create(this, R.raw.music);
-        backgroundMusic.setLooping(true);
-        clickSound = MediaPlayer.create(this, R.raw.click);
-        instance = this;
+        init();
     }
 
     @Override
@@ -38,6 +35,7 @@ public class MusicService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if(instance == null) init();
         backgroundMusic.start();
         return super.onStartCommand(intent, flags, startId);
     }
@@ -51,7 +49,7 @@ public class MusicService extends Service {
 
     public void play() {
         if(!isOn()) {
-            setOn(true);
+            on = true;
             backgroundMusic.start();
         }
     }
@@ -70,9 +68,16 @@ public class MusicService extends Service {
 
     public void pause() {
         if(isOn()) {
-            setOn(false);
+            on = false;
             backgroundMusic.pause();
         }
+    }
+
+    private void init() {
+        backgroundMusic = MediaPlayer.create(this, R.raw.music);
+        backgroundMusic.setLooping(true);
+        clickSound = MediaPlayer.create(this, R.raw.click);
+        instance = this;
     }
 
     public static MusicService getInstance() {
@@ -80,11 +85,7 @@ public class MusicService extends Service {
     }
 
     public boolean isOn() {
-        return _on;
-    }
-
-    private void setOn(boolean on) {
-        _on = on;
+        return on;
     }
 }
 
