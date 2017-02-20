@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import edu.fje.clot.puzzle.scores.bean.Score;
 import edu.fje.clot.puzzle.scores.db.ScoreDbUtil;
@@ -225,6 +226,7 @@ public class GameActivity extends Activity {
 			score.valueIncrement();
 
 			if(isGameFinished()) {
+				toast(R.string.game_finished).show();
 				disconnectGameButtons();
 				new ScoreDbUtil(this).insert(score);
 			}
@@ -334,5 +336,9 @@ public class GameActivity extends Activity {
 	 */
 	private boolean destroyService(Class service) {
 		return Util.destroyService(this, service);
+	}
+
+	private Toast toast(int id) {
+		return Toast.makeText(this, id, Toast.LENGTH_SHORT);
 	}
 }
