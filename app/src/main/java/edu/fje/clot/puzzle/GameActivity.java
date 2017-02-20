@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -14,6 +20,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +32,11 @@ import edu.fje.clot.puzzle.service.audio.MusicService;
 import edu.fje.clot.puzzle.service.image.ImageService;
 import edu.fje.clot.puzzle.statics.LayoutParamsLists;
 import edu.fje.clot.puzzle.statics.Util;
+
+import static android.R.color.black;
+import static android.R.color.holo_blue_bright;
+import static android.R.color.holo_green_dark;
+import static android.R.color.white;
 
 
 @SuppressWarnings("deprecation")
@@ -78,6 +90,7 @@ public class GameActivity extends Activity {
 				initGameButtons();
 				initSoundButton();
 				initCounter();
+				animation();
 				break;
 			default:
 				Log.d("Intent", "Unrecognized code");
@@ -341,4 +354,29 @@ public class GameActivity extends Activity {
 	private Toast toast(int id) {
 		return Toast.makeText(this, id, Toast.LENGTH_SHORT);
 	}
+
+	private void animation() {
+		int nBlack = getResources().getColor(black),
+				nBlue = getResources().getColor(holo_blue_bright),
+				nGreen = getResources().getColor(holo_green_dark),
+				nWhite = getResources().getColor(white);
+		ArgbEvaluator evaluator = new ArgbEvaluator();
+
+		AnimatorSet as = new AnimatorSet();
+		as.setTarget(this);
+		as.playSequentially(ValueAnimator.ofObject(evaluator, nBlack, nBlue),
+				ValueAnimator.ofObject(evaluator, nBlue, nGreen),
+				ValueAnimator.ofObject(evaluator, nGreen, nWhite),
+				ValueAnimator.ofObject(evaluator, nWhite, nBlack));
+		as.setDuration(500);
+		as.addListener(new AnimatorListenerAdapter() {
+			@Override
+			public void onAnimationEnd(Animator a) {
+				super.onAnimationEnd(a);
+				a.start();
+			}
+		});
+		as.start();
+	}
+
 }
