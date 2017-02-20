@@ -18,7 +18,6 @@ public class MusicService extends Service {
     private static MusicService instance;
     MediaPlayer backgroundMusic;
     MediaPlayer clickSound;
-    MediaPlayer mp;
     private String LOG = "edu.fje.dam2";
     private boolean on = true;
 
@@ -99,30 +98,20 @@ public class MusicService extends Service {
             switch (focusChange) {
                 //perdem el focus per exemple, una altre reproductor de música
                 case AudioManager.AUDIOFOCUS_LOSS:
-                    mp.stop();
-                    Log.d(LOG, "AudioFocus: rebut AUDIOFOCUS_LOSS");
-                    mp.release();
-                    mp = null;
+                    stop();
                     break;
                 //perdem el focus temporalement, per exemple, trucada
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
-                    if (mp.isPlaying())
-                        mp.pause();
-
-                    Log.d(LOG, "AudioFocus: rebut AUDIOFOCUS_LOSS_TRANSIENT");
-
+                    pause();
                     break;
                 //baixem el volum temporalment
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
-                    mp.setVolume(0.5f, 0.5f);
-                    Log.d(LOG, "AudioFocus: rebut AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
+                    pause();
                     break;
 
                 //es recupera el focus d'audio
                 case AudioManager.AUDIOFOCUS_GAIN:
-                    mp.start();
-                    mp.setVolume(1.0f, 1.0f);
-                    Log.d(LOG, "AudioFocus: rebut AUDIOFOCUS_GAIN");
+                    play();
                     break;
 
                 default:
