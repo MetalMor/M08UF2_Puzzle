@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="game_buttons">
+        <item>@drawable/illidan</item>
+        <item>@drawable/communist_party</item>
+        <item>@drawable/nobushi</item>
+        <item>@drawable/skull_kid</item>
+    </array>
+</resources>
