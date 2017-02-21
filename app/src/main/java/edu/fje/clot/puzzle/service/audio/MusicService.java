@@ -96,20 +96,16 @@ public class MusicService extends Service {
         public void onAudioFocusChange(int focusChange) {
 
             switch (focusChange) {
-                //perdem el focus per exemple, una altre reproductor de música
                 case AudioManager.AUDIOFOCUS_LOSS:
                     stop();
                     break;
-                //perdem el focus temporalement, per exemple, trucada
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                     pause();
                     break;
-                //baixem el volum temporalment
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
                     pause();
                     break;
 
-                //es recupera el focus d'audio
                 case AudioManager.AUDIOFOCUS_GAIN:
                     play();
                     break;

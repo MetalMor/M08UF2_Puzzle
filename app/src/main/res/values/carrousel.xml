@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="game_buttons">
+    <array name="carrousel_images">
         <item>@drawable/illidan</item>
         <item>@drawable/communist_party</item>
         <item>@drawable/nobushi</item>
