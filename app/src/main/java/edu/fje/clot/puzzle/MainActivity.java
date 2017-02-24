@@ -35,6 +35,13 @@ public class MainActivity extends Activity {
 				startActivity(new Intent(getApplicationContext(), GameActivity.class));
 			}
 		});
+
+		findViewById(R.id.button_carrousel).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				startActivity(new Intent(getApplicationContext(), CarrouselActivity.class));
+			}
+		});
     }
     public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();

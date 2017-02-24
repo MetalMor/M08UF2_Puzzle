@@ -46,4 +46,13 @@ android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/list_view_scores" />
 
+    <Button
+        android:text="Images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_carrousel"
+        android:layout_alignBottom="@+id/title_image"
+        android:layout_toEndOf="@+id/title_image"
+        android:layout_marginBottom="60dp" />
+
 </RelativeLayout>

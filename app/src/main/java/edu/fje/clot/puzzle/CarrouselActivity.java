@@ -32,6 +32,7 @@ public class CarrouselActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_carrousel);
         imageView = (ImageView) findViewById(R.id.carrousel_image);
 
         new android.os.Handler().postDelayed(new Runnable() {
@@ -46,25 +47,28 @@ public class CarrouselActivity extends Activity {
                 firstAnimation = new AnimatorSet();
                 lastAnimation = new AnimatorSet();
 
-                firstAnimation.playSequentially(
+                final AnimatorSet fa = firstAnimation;
+                final AnimatorSet la = lastAnimation;
+
+                fa.playSequentially(
                         ObjectAnimator.ofFloat(imageView, PROPERTY_X_COORD, width),
                         ObjectAnimator.ofFloat(imageView, View.ALPHA, 1, 0)
                 );
 
-                firstAnimation.setDuration(500);
-                firstAnimation.addListener(new AnimatorListenerAdapter() {
+                fa.setDuration(500);
+                fa.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(final Animator firstAnimator) {
                         super.onAnimationEnd(firstAnimator);
 
                         setImage();
                         imageView.setX(0 - imageView.getWidth());
-                        lastAnimation.playSequentially(
+                        la.playSequentially(
                                 ObjectAnimator.ofFloat(imageView, View.ALPHA, 0, 1),
                                 ObjectAnimator.ofFloat(imageView, PROPERTY_X_COORD, width / 4)
                         );
-                        lastAnimation.setDuration(500);
-                        lastAnimation.addListener(new AnimatorListenerAdapter() {
+                        la.setDuration(500);
+                        la.addListener(new AnimatorListenerAdapter() {
                             @Override
                             public void onAnimationEnd(Animator lastAnimator) {
                                 super.onAnimationEnd(lastAnimator);
@@ -72,24 +76,27 @@ public class CarrouselActivity extends Activity {
                                 new android.os.Handler().postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                        firstAnimator.start();
+                                        fa.start();
                                     }
                                 }, 1000);
                             }
                         });
-                        lastAnimation.start();
+                        la.start();
                     }
                 });
-                firstAnimation.start();
+                fa.start();
             }
         }, 1000);
     }
 
     private Drawable[] findImages() {
-        Drawable[] images = new Drawable[9];
+        int id;
         TypedArray layouts = getResources().obtainTypedArray(R.array.carrousel_images);
-        for(int i = 0; i < 9; i++)
-            images[i] = getResources().getDrawable(layouts.getResourceId(i, -1));
+        Drawable[] images = new Drawable[layouts.length()];
+        for(int i = 0; i < layouts.length(); i++) {
+            id = layouts.getResourceId(i, -1);
+            if(id != -1) images[i] = getResources().getDrawable(id);
+        }
         layouts.recycle();
         return images;
     }

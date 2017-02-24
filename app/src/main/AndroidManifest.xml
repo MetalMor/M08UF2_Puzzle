@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GameActivity" />
+        <activity android:name=".CarrouselActivity" />
 
         <service android:name=".service.audio.MusicService" />
         <service android:name=".service.image.ImageService" />
